@@ -1,21 +1,57 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<br>
+<mat-card class="back" >
+ <div class="table"> 
+     <br>
+     <br>  
+<table>
+    <tr>
+        <td>
+<mat-card class="card"[ngStyle]="{'background-color':getcolor1()}" >
+        <div class="title">
+    <mat-card-header>
+      <mat-card-title style="font-size:25px">Slot1</mat-card-title>
+    </mat-card-header>
+    </div>
+    <mat-card-content *ngFor="let time of fielddata">
+       <p style="color:inherit;text-align:center;font-size:20px">Seconds : {{ time.slot1time}}</p>
+    <p style="color:inherit;text-align:center;font-size:20px">Fare : {{ time.fare1}}</p>
+         </mat-card-content>
+   
+  </mat-card>
+  </td>
+  <td>
+        <mat-card class="card"[ngStyle]="{'background-color':getcolor2()}">
+                <div class="title">
+            <mat-card-header>
+              <mat-card-title style="font-size:25px">Slot2</mat-card-title>
+            </mat-card-header>
+            </div>
+            <mat-card-content *ngFor="let time of fielddata">
+                    <p style="color:inherit;text-align:center;font-size:20px">seconds : {{ time.slot2time}}</p>
+    <p style="color:inherit;text-align:center;font-size:20px">Fare : {{ time.fare2}}</p>
+</mat-card-content>
+           
+          </mat-card>
+          </td>
+  <td>
+<mat-card class="card"[ngStyle]="{'background-color':getcolor3()}">
+        <div class="title">
+    <mat-card-header>
+      <mat-card-title style="font-size:25px">Slot3</mat-card-title>
+    </mat-card-header>
+    </div>
+    <mat-card-content *ngFor="let time of fielddata">
+            <p style="color:inherit;text-align:center;font-size:20px"> seconds  :{{ time.slot3time}}</p>
+    <p style="color:inherit;text-align:center;font-size:20px">Fare : {{ time.fare3}}</p>
+</mat-card-content>
+  </mat-card></td>
+  </tr>
+  </table>
+  </div>
+  <br>
+  <br>
+  <div >
+  <button  class="button"mat-flat-button color="black" (click)="getdata()"> Check Avalability</button>
+  </div></mat-card>
 <router-outlet></router-outlet>

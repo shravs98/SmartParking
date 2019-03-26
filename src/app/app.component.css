@@ -1,0 +1,27 @@
+.card {
+    width: 200px;
+    height: 200px;
+    background-color:white;
+    border-radius: 25px;
+  }
+  
+  .button{
+      left: 340px;
+      border-radius: 12px;
+  }
+  .back{
+    border-radius:50px;
+     width: 800px;
+     height: 380px;
+     left: 280px;
+     top: 50px;
+     background-color:#232121;
+
+  }
+  .table{
+      margin-left: 50px;
+  }
+  .title{
+      margin-left:50px;
+  }
+  
